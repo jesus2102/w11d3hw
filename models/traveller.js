@@ -23,7 +23,8 @@ Traveller.prototype.getJourneysByTransport = function (transport) {
 };
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
-
+  const journeyByMinDistance = this.journeys.filter(journey => journey.distance >= minDistance);
+  return journeyByMinDistance;
 };
 
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
